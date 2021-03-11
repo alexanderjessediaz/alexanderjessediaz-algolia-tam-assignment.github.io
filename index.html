@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <link rel="shortcut icon" href="./favicon.png">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
+  <link rel="stylesheet" href="./src/index.css">
+  <link rel="stylesheet" href="./src/app.css">
+
+  <title>algolia-sa-assignment</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo-container">
+        <img class="header__logo" src="src/Assets/logo.svg">
+      </div>
+      <div class="header__searchbox-container">
+        <div class="header__searchbox" id="searchbox"></div>
+        <div class="autocomplete">
+          <div class="autocomplete_container">
+            <div class="autocomplete__hits" id="autocomplete-hits">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="results">
+  </div>
+
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
