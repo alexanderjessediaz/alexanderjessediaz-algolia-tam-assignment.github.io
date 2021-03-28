@@ -2,6 +2,61 @@
   box-sizing: border-box;
 }
 
+/*
+ FEDERATED SEARCH BOX STYLE
+*/
+ 
+.federated-results-container {
+  width: 150%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+      -180deg,
+      hsla(0, 0%, 100%, 0),
+      hsla(0, 0%, 100%, 0.8)
+    )
+    #ebecf3;
+  box-shadow: 0 20px 44px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  display: none;
+}
+
+@media (max-width: 1130px) {
+  .federated-results-container {
+    width: 100vw;
+  }
+}
+
+.federated-results-container .column {
+  text-align: left;
+  font-weight: normal;
+  position: relative;
+  padding: 12px 16px;
+}
+
+.federated-results-container .column:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #aaa;
+  opacity: 0.5;
+}
+
+.federated-results-container .column h2 {
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+ 
+
+
 /* Instant Search */
 .ais-Hits-list {
   display: flex;
