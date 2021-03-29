@@ -21,38 +21,39 @@
       <div class="header__logo-container">
         <img class="header__logo" src="src/Assets/logo.svg">
       </div>
+
       <div class="header__searchbox-container">
-      </div>
-      <div class="header__searchbox" id="searchbox"></div>
-      <div class="autocomplete">
-        <div class="autocomplete_container">
-          <div class="searchWidget widget">
-            <div class="federated-results-container">
-              <div class="column">
-                <h2>Suggestions</h2>
-                <div id="suggestions"></div>
+        <div class="header__searchbox" id="searchbox"></div>
+          <div class="autocomplete">
+            <div class="autocomplete_container">
+              <div class="autocomplete__hits" id="autocomplete-hits">
               </div>
-              <div class="column">
-                <h2>Products</h2>
-                <div id="products"></div>
+              <!-- <div class="federated-results-container"> -->
+                <div class="column">
+                  <h2>Suggestions</h2>
+                  <div id="suggestions"></div>
+                </div>
+                <div class="column">
+                  <h2>Products</h2>
+                  <div id="products"></div>
+                  <a href="#">See more products</a>
+                </div>
+                <div class="column">
+                  <h2>Categories</h2>
+                  <div id="categories"></div>
+                </div>
+              <!-- </div> -->
               </div>
-              <div class="column">
-                <h2>Categories</h2>
-                <div id="categories"></div>
-              </div>
-            <div class="autocomplete__hits" id="autocomplete-hits"></div>
-            </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </header>
+          <div class="results">
+          </div>
+              
+          
 
-  <div class="results">
-  </div>
-</body>
+</header>
 
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.35.1/dist/algoliasearchLite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js"></script>
   <script src="./src/app.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.35.1/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js"></script>
 </html>
