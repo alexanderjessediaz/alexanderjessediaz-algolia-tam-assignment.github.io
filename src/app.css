@@ -7,7 +7,7 @@
 */
  
 .federated-results-container {
-  width: 150%;
+  width: 100%;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -22,7 +22,6 @@
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  display: none;
 }
 
 @media (max-width: 1130px) {

@@ -9,11 +9,13 @@ import {
   connectRefinementList,
 } from 'instantsearch.js/es/connectors';
 
-// can't get my api to work. I thought this is the correct appID, but I get a 404 error eacht time I test it
-// const search = instantsearch({
-//   indexName: 'instant_search',
-//   searchClient: algoliasearch('F6UQOMGX2S', '4aee1de08ceb37e9f064f5e22b505eb3'),
-// });
+
+const APP_ID = 'F6UQOMGX2S'
+const APP_KEY = 'e5b9420b822b6a030c7161dd7c1405af'
+
+const INSTANT_SEARCH = 'instant_search'
+const SUGGESTIONS = 'suggestions'
+
 
 /**
  * @class Autocomplete
@@ -35,15 +37,15 @@ class Autocomplete {
    * @return {void}
    */
 
-  // using default data to show something
+
   _registerClient() {
     this._searchClient = algoliasearch(
-      'VYLEWMPKEZ',
-      '8940a18fde155adf3f74b0912c267aa4'
+      APP_ID,
+      APP_KEY
     );
 
     this._searchInstance = instantsearch({
-      indexName: 'ecommerce-v2',
+      indexName: INSTANT_SEARCH,
       searchClient: this._searchClient,
     });
   }
@@ -99,7 +101,7 @@ class Autocomplete {
         showLoadingIndicator: true,
       }),
       index({
-        indexName: 'ecommerce-v2',
+        indexName: 'instant_search',
         indexId: this._searchClient,
       }).addWidgets([
         configure({
@@ -124,7 +126,7 @@ class Autocomplete {
         }),
       ]),
       index({
-        indexName: 'ecommerce-v2',
+        indexName: SUGGESTIONS,
       }).addWidgets([
         configure({
           hitsPerPage: 16,
